@@ -128,9 +128,6 @@ foreach ($item in $sourceItems) {
 
     # Не выгружаем содержимое заметок, вложения и личные поля в публичный GitHub.
     # Скан и PDF остаются в Zotero или отдельном хранилище.
-    $attachments = @()
-    $notes = @()
-
     # Защита от случайного попадания посторонней коллекции
     $itemCollections = @(
         $item.data.collections |
@@ -151,8 +148,6 @@ foreach ($item in $sourceItems) {
 
         collections = $itemCollections
         zoteroURL   = "https://www.zotero.org/users/$userID/items/$($item.key)"
-        notesCount  = 0
-        attachmentsCount = 0
     }
 }
 
@@ -167,16 +162,6 @@ foreach ($entry in $exportItems) {
     $entry['collections'] = @(
         $entry['collections'] |
         Sort-Object
-    )
-
-    $entry['notes'] = @(
-        $entry['notes'] |
-        Sort-Object key
-    )
-
-    $entry['attachments'] = @(
-        $entry['attachments'] |
-        Sort-Object key
     )
 
 }
