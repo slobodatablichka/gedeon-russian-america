@@ -1,0 +1,5 @@
+# Secrets and unreviewed metadata
+.env
+.env.*
+*.secret
+research/zotero/catalog.json
