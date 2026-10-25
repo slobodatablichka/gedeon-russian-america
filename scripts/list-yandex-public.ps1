@@ -20,9 +20,15 @@ while ($folders.Count -gt 0) {
         $uri = $Api + '?public_key=' + [uri]::EscapeDataString($PublicUrl) +
             '&path=' + [uri]::EscapeDataString($folderPath) +
             '&limit=' + $Limit + '&offset=' + $offset
-        $json = & curl.exe --interface $InterfaceIP --silent --show-error --fail --connect-timeout 10 --max-time 45 $uri
-        if ($LASTEXITCODE -ne 0) { throw "Yandex request failed at path '$folderPath' (curl $LASTEXITCODE)." }
-        $response = ($json -join "`n") | ConvertFrom-Json
+        $temp = [IO.Path]::GetTempFileName()
+        try {
+            & curl.exe --interface $InterfaceIP --silent --show-error --fail --connect-timeout 10 --max-time 45 -o $temp $uri
+            if ($LASTEXITCODE -ne 0) { throw "Yandex request failed at path '$folderPath' (curl $LASTEXITCODE)." }
+            $json = [IO.File]::ReadAllText($temp, [Text.Encoding]::UTF8)
+            $response = $json | ConvertFrom-Json
+        } finally {
+            Remove-Item -LiteralPath $temp -ErrorAction SilentlyContinue
+        }
         if ($response.type -ne 'dir') { throw "Not a directory: '$folderPath'" }
         $page = @($response._embedded.items)
         foreach ($entry in $page) {
