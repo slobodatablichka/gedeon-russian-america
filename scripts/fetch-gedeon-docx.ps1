@@ -17,11 +17,16 @@ $targets = @(
 if ($targets.Count -ne 2) { throw "Expected 2 notes DOCX files; found $($targets.Count). No files downloaded." }
 New-Item -ItemType Directory -Force -Path $Target | Out-Null
 function Curl-ToFile([string]$Url, [string]$Destination) {
-    & curl.exe --interface $InterfaceIP --silent --show-error --fail --location --connect-timeout 10 --max-time 120 -o $Destination $Url
+    & curl.exe --interface $InterfaceIP --silent --show-error --fail --location --retry 4 --retry-all-errors --retry-delay 3 --connect-timeout 20 --max-time 180 -o $Destination $Url
     if ($LASTEXITCODE -ne 0) { throw "curl failed: $LASTEXITCODE" }
 }
 foreach ($item in $targets) {
     if ($item.size -gt 1000000) { throw 'File exceeds 1 MB safety limit.' }
+    $dest = Join-Path $Target $item.name
+    if ((Test-Path -LiteralPath $dest) -and (Get-Item -LiteralPath $dest).Length -eq $item.size) {
+        Write-Host "Already downloaded: $($item.name)"
+        continue
+    }
     $query = 'public_key=' + [uri]::EscapeDataString($PublicUrl) + '&path=' + [uri]::EscapeDataString([string]$item.path)
     $tmp = [IO.Path]::GetTempFileName()
     try {
@@ -29,7 +34,6 @@ foreach ($item in $targets) {
         $meta = [IO.File]::ReadAllText($tmp, [Text.Encoding]::UTF8) | ConvertFrom-Json
     } finally { Remove-Item -LiteralPath $tmp -ErrorAction SilentlyContinue }
     if (-not $meta.href) { throw 'API returned no download URL.' }
-    $dest = Join-Path $Target $item.name
     Curl-ToFile $meta.href $dest
     if ((Get-Item -LiteralPath $dest).Length -ne $item.size) { throw 'Downloaded size mismatch.' }
     Write-Host "OK: $($item.name) ($($item.size) bytes)"
