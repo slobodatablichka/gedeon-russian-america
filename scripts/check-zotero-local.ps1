@@ -7,8 +7,14 @@ $collectionName = 'Гедеон — Русская Америка'
 $dest = Join-Path $root 'research\zotero\local-catalog.json'
 function Get-Local([string]$endpoint) {
   $url = $base + $endpoint
-  try { return Invoke-RestMethod -Method Get -Uri $url -TimeoutSec 12 -Proxy $null -Headers @{'Zotero-API-Version'='3'} }
-  catch { throw "Zotero Desktop local API unavailable for $endpoint. Check Zotero Settings > Advanced > Allow other applications on this computer to communicate with Zotero. Details: $($_.Exception.Message)" }
+  $tmp = [IO.Path]::GetTempFileName()
+  try {
+    & curl.exe --noproxy '*' --http1.1 --silent --show-error --fail --max-time 20 -H 'Zotero-API-Version: 3' --output $tmp $url
+    if($LASTEXITCODE -ne 0){throw "curl exit code $LASTEXITCODE for $endpoint"}
+    $json=[IO.File]::ReadAllText($tmp,[Text.Encoding]::UTF8)
+    if([string]::IsNullOrWhiteSpace($json)){return @()}
+    return ($json|ConvertFrom-Json)
+  } finally {Remove-Item -LiteralPath $tmp -ErrorAction SilentlyContinue}
 }
 function Get-All([string]$endpoint) {
   $out = @()
