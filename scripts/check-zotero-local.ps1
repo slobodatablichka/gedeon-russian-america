@@ -3,7 +3,7 @@
 $ErrorActionPreference = 'Stop'
 $root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $base = 'http://127.0.0.1:23119/api/users/0'
-$collectionName = 'Гедеон — Русская Америка'
+$collectionKey = 'YWQFHUER'
 $dest = Join-Path $root 'research\zotero\local-catalog.json'
 function Get-Local([string]$endpoint) {
   $url = $base + $endpoint
@@ -27,9 +27,10 @@ function Get-All([string]$endpoint) {
   return ,$out
 }
 $collections = @(Get-All '/collections')
-$matched = @($collections | Where-Object { $_.data.name -eq $collectionName })
-if($matched.Count -ne 1){throw "Expected one collection '$collectionName', found $($matched.Count)."}
+$matched = @($collections | Where-Object { $_.key -eq $collectionKey })
+if($matched.Count -ne 1){throw "Expected collection key $collectionKey, found $($matched.Count)."}
 $rootKey=[string]$matched[0].key
+$collectionName=[string]$matched[0].data.name
 $allowed=New-Object 'System.Collections.Generic.HashSet[string]'
 [void]$allowed.Add($rootKey)
 do {
