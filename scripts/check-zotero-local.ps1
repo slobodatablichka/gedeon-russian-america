@@ -24,7 +24,7 @@ function Get-All([string]$endpoint) {
     $out+= $page
     if($page.Count -lt 100){break}
   }
-  return ,$out
+  return $out
 }
 $collections = @(Get-All '/collections')
 $matched = @($collections | Where-Object { $_.key -eq $collectionKey })
