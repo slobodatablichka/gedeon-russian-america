@@ -36,10 +36,10 @@ foreach ($entry in @($entries)) {
 $report = [ordered]@{
   collectionKey = [string]$rootKey
   itemCount = $rows.Count
-  pdfAttachmentCount = @($rows | ForEach-Object { $_.pdfCount } | Measure-Object -Sum).Count
+  pdfAttachmentCount = 0
   items = @($rows)
 }
-$report.pdfAttachmentCount = [int](($rows | Measure-Object -Property pdfCount -Sum).Sum)
+$report.pdfAttachmentCount = [int](($rows | ForEach-Object { [int]$_.pdfCount } | Measure-Object -Sum).Sum)
 [IO.File]::WriteAllText(
   $reportPath,
   ($report | ConvertTo-Json -Depth 20),
