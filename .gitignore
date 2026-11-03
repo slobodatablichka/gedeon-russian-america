@@ -3,3 +3,6 @@
 .env.*
 *.secret
 research/zotero/catalog.json
+
+# Locally extracted copyrighted book texts: never publish these files
+research/local-private/
