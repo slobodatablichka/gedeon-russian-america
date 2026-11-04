@@ -5,30 +5,30 @@
   "source": "User provided live Zotero Desktop local API response, /api/users/0/items/top?sort=dateAdded&direction=desc&limit=20",
   "verifiedBibliographyItems": 14,
   "verifiedNewImportItems": 9,
-  "note": "13 bibliography source keys were confirmed at stage 3 (4 earlier + 9 after RIS import). The 14th citation is an already existing scholarly Zotero record LGCXJCUR from the earlier audit. Membership of the nine imported records in collection YWQFHUER was not established by the user's API output; all item keys are verified as in library. No user action required.",
+  "note": "After journal alphabetization, 15 numbered sources are listed; 14 have verified Zotero Item Keys, one additional NPS Origin of the Name webpage has full public bibliographic description but no Zotero key. No extra user operations are required for document preparation. The manuscript bibliography is authoritative for numbered citations.",
   "items": [
     {
       "number": 1,
-      "title": "Ляпунова. Записки иеромонаха Гедеона (1979)",
-      "key": "X5A2743W",
-      "origin": "previous-audit"
+      "title": "Белгородская православная духовная семинария. История",
+      "key": "DX3JMGUC",
+      "origin": "2026-11-04-import"
     },
     {
       "number": 2,
-      "title": "Иерусалимский, Давыдов. Роль Витуса Беринга (2022)",
-      "key": "QTHWNKI6",
-      "origin": "2026-11-04-import"
+      "title": "Докладная записка Главного правления РАК (1802)",
+      "key": "JC88JNQK",
+      "origin": "previous-audit"
     },
     {
       "number": 3,
-      "title": "National Park Service. The Russians",
-      "key": "YMR2AFS9",
-      "origin": "2026-11-04-import"
+      "title": "Егорова Ю. С. К вопросу об организации и направлении первой православной миссии в Северную Америку (о. Кадьяк) // Американский ежегодник. 2010. С. 46–58.",
+      "key": "LGCXJCUR",
+      "origin": "previous-audit; added to bibliography at stage 4"
     },
     {
       "number": 4,
-      "title": "Orthodox Church in America. Chronology of the Life of Saint Herman of Alaska",
-      "key": "PKRJUZ8J",
+      "title": "Иерусалимский, Давыдов. Роль Витуса Беринга (2022)",
+      "key": "QTHWNKI6",
       "origin": "2026-11-04-import"
     },
     {
@@ -39,20 +39,20 @@
     },
     {
       "number": 6,
-      "title": "Докладная записка Главного правления РАК (1802)",
-      "key": "JC88JNQK",
-      "origin": "previous-audit"
-    },
-    {
-      "number": 7,
       "title": "Климент (Капалин). Православие в Русской Америке (2020)",
       "key": "XCMHD4U4",
       "origin": "previous-audit"
     },
     {
+      "number": 7,
+      "title": "Ляпунова. Записки иеромонаха Гедеона (1979)",
+      "key": "X5A2743W",
+      "origin": "previous-audit"
+    },
+    {
       "number": 8,
-      "title": "Рункевич. Александро-Невская лавра. 1713–1913",
-      "key": "ZDSTTBS7",
+      "title": "Ленком. Юнона и Авось",
+      "key": "9DMWTTY6",
       "origin": "2026-11-04-import"
     },
     {
@@ -63,33 +63,40 @@
     },
     {
       "number": 10,
+      "title": "Рункевич. Александро-Невская лавра. 1713–1913",
+      "key": "ZDSTTBS7",
+      "origin": "2026-11-04-import"
+    },
+    {
+      "number": 11,
       "title": "National Park Service. Concepcion Arguello & Nikolai Petrovich Rezanov",
       "key": "TB6PNRSG",
       "origin": "2026-11-04-import"
     },
     {
-      "number": 11,
-      "title": "Ленком. Юнона и Авось",
-      "key": "9DMWTTY6",
+      "number": 12,
+      "title": "National Park Service. Origin of the Name // Beringia",
+      "key": null,
+      "origin": "2026-11-04 public web source; fully cited in manuscript; Zotero import not performed"
+    },
+    {
+      "number": 13,
+      "title": "National Park Service. The Russians",
+      "key": "YMR2AFS9",
       "origin": "2026-11-04-import"
     },
     {
-      "number": 12,
+      "number": 14,
       "title": "Orthodox Church in America. 150th anniversary of the North American diocesan see",
       "key": "YPSQAT6D",
       "origin": "2026-11-04-import"
     },
     {
-      "number": 13,
-      "title": "Белгородская православная духовная семинария. История",
-      "key": "DX3JMGUC",
+      "number": 15,
+      "title": "Orthodox Church in America. Chronology of the Life of Saint Herman of Alaska",
+      "key": "PKRJUZ8J",
       "origin": "2026-11-04-import"
-    },
-    {
-      "number": 14,
-      "title": "Егорова Ю. С. К вопросу об организации и направлении первой православной миссии в Северную Америку (о. Кадьяк) // Американский ежегодник. 2010. С. 46–58.",
-      "key": "LGCXJCUR",
-      "origin": "previous-audit; added to bibliography at stage 4"
     }
-  ]
+  ],
+  "totalBibliographySources": 15
 }
