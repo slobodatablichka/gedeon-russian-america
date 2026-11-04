@@ -5,7 +5,7 @@
 ## Вход в работу
 1. Прочитать по порядку: `START.md` → `AGENTS.md` → `governance/PROJECT-INSTRUCTIONS.md` → `governance/CURRENT-STATE.md`.
 2. Проверить действительный HEAD GitHub и файлы, необходимые для последнего поручения автора. Не подменять GitHub памятью чата.
-3. При необходимости открыть `article/OUTLINE.md`, `governance/WRITING-GUIDE.md`, `research/SOURCE-REGISTER.md`, `research/EVIDENCE.md` и `research/zotero/README.md`. При подготовке к публикации — `governance/JOURNAL-REQUIREMENTS.md`.
+3. При необходимости открыть `article/OUTLINE.md`, `governance/WRITING-GUIDE.md`, `research/SOURCE-REGISTER.md`, `research/EVIDENCE.md` и `research/zotero/README.md`. При доведении статьи до научной публикации — `governance/PUBLICATION-PLAN.md` (этапы) и `governance/JOURNAL-REQUIREMENTS.md` (оформление).
 
 ## Приоритеты
 **Последнее поручение автора** определяет текущую задачу; ранее утверждённые ограничения сохраняются, пока автор их не изменил. Правила исполнения — только в `AGENTS.md`; исследовательский стандарт — в `governance/PROJECT-INSTRUCTIONS.md`; композиция — в `article/OUTLINE.md`; стиль — в `governance/WRITING-GUIDE.md`; фактическое состояние — в `governance/CURRENT-STATE.md`. Старые «следующие шаги» в иных файлах не действуют.
