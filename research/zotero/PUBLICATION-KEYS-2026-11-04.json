@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "recordedDate": "2026-11-04",
+  "projectCollectionKey": "YWQFHUER",
+  "source": "User provided live Zotero Desktop local API response, /api/users/0/items/top?sort=dateAdded&direction=desc&limit=20",
+  "verifiedBibliographyItems": 13,
+  "verifiedNewImportItems": 9,
+  "note": "Item keys verified in Zotero library. Their membership in the project collection YWQFHUER is not established by the displayed API output; no additional user action is required for proceeding to stage 4.",
+  "items": [
+    {
+      "number": 1,
+      "title": "Ляпунова. Записки иеромонаха Гедеона (1979)",
+      "key": "X5A2743W",
+      "origin": "previous-audit"
+    },
+    {
+      "number": 2,
+      "title": "Иерусалимский, Давыдов. Роль Витуса Беринга (2022)",
+      "key": "QTHWNKI6",
+      "origin": "2026-11-04-import"
+    },
+    {
+      "number": 3,
+      "title": "National Park Service. The Russians",
+      "key": "YMR2AFS9",
+      "origin": "2026-11-04-import"
+    },
+    {
+      "number": 4,
+      "title": "Orthodox Church in America. Chronology of the Life of Saint Herman of Alaska",
+      "key": "PKRJUZ8J",
+      "origin": "2026-11-04-import"
+    },
+    {
+      "number": 5,
+      "title": "Валаамское издание 1894. Из рукописи о. Гедеона",
+      "key": "IJJL6CNU",
+      "origin": "previous-audit"
+    },
+    {
+      "number": 6,
+      "title": "Докладная записка Главного правления РАК (1802)",
+      "key": "JC88JNQK",
+      "origin": "previous-audit"
+    },
+    {
+      "number": 7,
+      "title": "Климент (Капалин). Православие в Русской Америке (2020)",
+      "key": "XCMHD4U4",
+      "origin": "previous-audit"
+    },
+    {
+      "number": 8,
+      "title": "Рункевич. Александро-Невская лавра. 1713–1913",
+      "key": "ZDSTTBS7",
+      "origin": "2026-11-04-import"
+    },
+    {
+      "number": 9,
+      "title": "Описание деятельности Гедеона на Кадьяке",
+      "key": "QXNTB24W",
+      "origin": "2026-11-04-import"
+    },
+    {
+      "number": 10,
+      "title": "National Park Service. Concepcion Arguello & Nikolai Petrovich Rezanov",
+      "key": "TB6PNRSG",
+      "origin": "2026-11-04-import"
+    },
+    {
+      "number": 11,
+      "title": "Ленком. Юнона и Авось",
+      "key": "9DMWTTY6",
+      "origin": "2026-11-04-import"
+    },
+    {
+      "number": 12,
+      "title": "Orthodox Church in America. 150th anniversary of the North American diocesan see",
+      "key": "YPSQAT6D",
+      "origin": "2026-11-04-import"
+    },
+    {
+      "number": 13,
+      "title": "Белгородская православная духовная семинария. История",
+      "key": "DX3JMGUC",
+      "origin": "2026-11-04-import"
+    }
+  ]
+}
