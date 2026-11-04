@@ -3,9 +3,9 @@
   "recordedDate": "2026-11-04",
   "projectCollectionKey": "YWQFHUER",
   "source": "User provided live Zotero Desktop local API response, /api/users/0/items/top?sort=dateAdded&direction=desc&limit=20",
-  "verifiedBibliographyItems": 13,
+  "verifiedBibliographyItems": 14,
   "verifiedNewImportItems": 9,
-  "note": "Item keys verified in Zotero library. Their membership in the project collection YWQFHUER is not established by the displayed API output; no additional user action is required for proceeding to stage 4.",
+  "note": "13 bibliography source keys were confirmed at stage 3 (4 earlier + 9 after RIS import). The 14th citation is an already existing scholarly Zotero record LGCXJCUR from the earlier audit. Membership of the nine imported records in collection YWQFHUER was not established by the user's API output; all item keys are verified as in library. No user action required.",
   "items": [
     {
       "number": 1,
@@ -84,6 +84,12 @@
       "title": "Белгородская православная духовная семинария. История",
       "key": "DX3JMGUC",
       "origin": "2026-11-04-import"
+    },
+    {
+      "number": 14,
+      "title": "Егорова Ю. С. К вопросу об организации и направлении первой православной миссии в Северную Америку (о. Кадьяк) // Американский ежегодник. 2010. С. 46–58.",
+      "key": "LGCXJCUR",
+      "origin": "previous-audit; added to bibliography at stage 4"
     }
   ]
 }
